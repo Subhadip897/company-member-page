@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root{
+    --common_bg: #b76ace;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.horizontial-bookmark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookmark-content {
+    width: 155px;
+    border: 50px solid var(--common_bg);
+}
+
+.bookmark-content-right {
+    align-self: flex-end;
+    border-left: 50px solid transparent;
+}
+
+.bookmark-content-left {
+    align-self: flex-start;
+    border-right: 50px solid transparent;
+}
+
+
+/* ---------- company description ---------*/
+.container {
+    margin-top: 2.3rem;
+}
+
+#company-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+}
+
+.section-heading {
+    font-size: 32px;
+    background-color: var(--common_bg);
+    color: #fff;
+    padding: .8rem 5rem;
+    border-radius: 10px;
+    margin-bottom: .8rem;
+}
+
+#company-desc .about {
+    margin: 2rem 6rem;
+}
+
+.dotted-divider {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--common_bg);
+    height: 20px;
+}
+
+
+/* --------- Team member section --------- */
+#team-members-section{
+    text-align: center;
+}
+
+#team-members-heading {
+    margin-top: 4.5rem;
+    font-size: 32px;
+}
+
+.team-members-positions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-heading.section-heading-sm {
+    margin-top: 4rem;
+    padding: .5rem .9rem;
+    font-size: 24px;
+}
+
+.member-profiles > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11rem;
+    row-gap: 4rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.member-profiles > div:nth-of-type(1) {
+    gap: 7rem;
+    row-gap: 4rem;
+}
+
+.team-member{
+    cursor: pointer;
+    transition: .5s;
+    text-align: center;
+    font-weight: 600;
+    width: 190px;
+}
+
+.team-member:hover{
+    transform: scale(1.1);
+}
+
+.team-member img {
+    width: 160px;
+}
+
+.team-member .team-member_name {
+    font-size: 18px;
+    margin-bottom: .1rem;
+}
+
+.team-member .team-member_position {
+    font-size: 19px;
+    font-style: italic;
+    color: var(--common_bg);
+}
+
+
+/* development team */
+
+.team-members-development, .designation {
+    position: relative;
+}
+
+.designation-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.designation-header .designation-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--common_bg);
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+    padding: .9rem 1.6rem;
+    border-radius: 10px;
+}
+
+
+.designation-member-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0rem;
+    row-gap: 3.5rem;
+    margin-top: 2.2rem;
+    text-align: center;
+}
+
+.designation-member-list .team-member{
+    margin: 0 4.3rem;
+}
+.designation-member-list .team-member:nth-of-type(1){
+    margin: 0rem 2rem;
+    margin-left: 4.6rem;
+}
+
+.footer{
+    margin-top: -1rem;
+}
+
+
+@media screen and (max-width: 900px) {
+    .bookmark-content {
+        width: 120px;
+        border: 50px solid #b678b9;
+    }
+    
+    .bookmark-content-right {
+        align-self: flex-end;
+        border-left: 50px solid transparent;
+    }
+    
+    .bookmark-content-left {
+        align-self: flex-start;
+        border-right: 50px solid transparent;
+    }
+
+    
+    .dotted-divider {
+        overflow: hidden;
+        padding: 0 1rem;
+        font-size: 22px;
+        font-weight: 700;
+        color: #b678b9;
+        height: 20px;
+    }
+
+    .member-profiles > div {
+        gap: 5rem;
+        row-gap: 2rem;
+    }
+
+    .designation-header .designation-title{
+        font-size: 18px;
+    }
+
+    .designation-member-list .team-member{
+        margin: 0 .8rem;
+    }
+
+    .designation-member-list .team-member:nth-of-type(1){
+        margin: 0rem 2rem;
+    }
+}
+
+/* media query for scree 650px */
+@media screen and (max-width: 650px) {
+    .bookmark-content{
+        width: 90px;
+        border: 35px solid #b678b9;
+    }
+
+    .bookmark-content-right {
+        border-left: 40px solid transparent;
+    }
+    
+    .bookmark-content-left {
+        border-right: 40px solid transparent;
+    }
+
+    .section-heading{
+        font-size: 28px;
+        padding: .8rem 3rem;
+    }
+
+    #company-desc .about{
+        font-size: 20px;
+        text-align: justify;
+        margin: 2rem 3.4rem;
+        line-height: 2rem;
+    }
+
+    #team-members-heading {
+        margin-top: 3.2rem;
+        font-size: 28px;
+    }
+
+    .section-heading.section-heading-sm {
+        margin: 0 1rem;
+        margin-top: 3rem;
+        padding: .5rem .9rem;
+        font-size: 18px;
+    }
+
+    .member-profiles > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        row-gap: 3rem;
+        justify-content: center;
+        /* margin: 0 3rem; */
+        margin-top: 3rem;
+    }
+
+    .member-profiles > div:nth-of-type(1) {
+        gap: 0rem;
+    }
+
+    .team-member{
+        width: 160px;
+    }
+
+    .team-member img {
+        width: 120px;
+    }
+
+    .team-member .team-member_name {
+        font-size: 16px;
+    }
+    
+    .team-member .team-member_position {
+        font-size: 16px;
+        font-style: italic;
+        color: #b678b9;
+    }
+
+    .designation-header .bookmark-content-left,
+    .designation-header .bookmark-content-right{
+        display: none;
+    }
+
+    .designation-header{
+        align-items: center;
+    }
+
+    .designation-header .designation-title{
+        position: static;
+        left: 0;
+        transform: translateX(0);
+        font-size: 18px;
+        margin: 2rem 0;
+    }
+
+    .designation-member-list{
+        gap: 2rem;
+        row-gap: 3rem;
+        justify-content: center;
+        margin-top: .8rem;
+    }
+
+    .designation-member-list .team-member{
+        margin: 0 0rem;
+    }
+
+    .designation-member-list .team-member:nth-of-type(1){
+        margin: 0rem 0rem;
+    }
+
+    .footer{
+        margin-top: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .bookmark-content{
+        width: 0px;
+        border: 30px solid #b678b9;
+    }
+
+    .bookmark-content-right {
+        border-left: 40px solid transparent;
+    }
+    
+    .bookmark-content-left {
+        border-right: 40px solid transparent;
+    }
+
+    .section-heading{
+        font-size: 22px;
+        margin: 0 1rem;
+        padding: .5rem 2rem;
+    }
+
+    #company-desc .about{
+        font-size: 18px;
+        margin: 2rem 1.2rem;
+    }
+
+
+    .member-profiles > div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #team-members-section{
+        text-align: center;
+    }
+
+    #team-members-heading {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .designation-header .designation-title{
+        font-size: 16px;
+        margin: 1rem .6rem;
+        padding: .5rem .8rem;
+    }
+
+    .team-member{
+        max-width: 170px;
+    }
+
+    .section-heading.section-heading-sm {
+        margin-top: 3rem;
+        padding: .5rem .9rem;
+        font-size: 16px;
+    }
+}
